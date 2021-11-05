@@ -1,0 +1,27 @@
+GET http://127.0.0.1:5000/msgs/
+
+###
+
+POST http://127.0.0.1:5000/msgs
+Content-Type: application/json
+
+{
+  "textMsg": "Hey, Julia! What’s up?",
+  "email": "erato@gmail.com",
+  "timeDate": "{{$datetime rfc1123}}"
+}
+
+###
+
+PATCH  http://127.0.0.1:5000/msgs/3
+Content-Type: application/json
+
+{
+  "textMsg": "Hello there, Have bought  a new car?",
+  "email": "erato1@gmail.com",
+  "timeDate": "{{$datetime rfc1123}}"
+}
+
+###
+
+DELETE http://127.0.0.1:5000/msgs/2
